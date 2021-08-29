@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import "main.dart";
 
-
 class App extends StatelessWidget {
   
   static final String title = 'TextFormField';
@@ -19,6 +18,7 @@ String LoginLn ='';
 
   @override
   Widget build( BuildContext context){
+    var body;
     return Scaffold(
       body: SafeArea(
         key: formKey,
@@ -103,14 +103,14 @@ String LoginLn ='';
                   mainAxisAlignment: MainAxisAlignment.end,
                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
-      Container( 
-        
-          margin: EdgeInsets.all(15),
-             alignment: Alignment.centerLeft,
-             decoration: BoxDecoration(
-              color: Colors.black12,
-              borderRadius: BorderRadius.circular(30),
-              
+                      Container( 
+                        
+                          margin: EdgeInsets.all(15),
+                            alignment: Alignment.centerLeft,
+                            decoration: BoxDecoration(
+                              color: Colors.black12,
+                              borderRadius: BorderRadius.circular(30),
+                              
             ),
                 
             child:  TextFormField(                                  //Email
@@ -183,6 +183,7 @@ String LoginLn ='';
                                     ]
                                         ),
                                         SizedBox(height: 10,),
+                                       
                                            Container(     
                                                      //Stay Logged In
                                             height: 20,
@@ -217,6 +218,8 @@ String LoginLn ='';
                                       fontWeight: FontWeight.normal
                                     ),
                                   ),
+                                                 
+                                  
                                       SizedBox(width: 50,),
 
                                     Container(                                   //Forgotten Password?
@@ -238,7 +241,7 @@ String LoginLn ='';
                                                           ),
                                                            ),
                                             
-                                                   ],
+                                              ],
 
 
                                                      ),
@@ -251,11 +254,12 @@ String LoginLn ='';
                          padding : EdgeInsets.symmetric(vertical: 20),
                         
                            decoration: BoxDecoration(
-                            color: Colors.green,
+                           border: Border.all(width: 2.0 ,color :const Color(0xff5ABD8C)),
+                            color: Colors.green[300],
                               borderRadius: BorderRadius.circular(30),
                                  boxShadow: [
                                     BoxShadow(
-                                       color: Colors.green,
+                                       color: Colors.green.shade400,
                                             blurRadius: 20,
                                                  offset: Offset(0,16)
                                   )
