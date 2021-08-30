@@ -13,13 +13,21 @@ class SignIn extends StatefulWidget {
 
 
 class _SignIn extends State<SignIn> {
+  final formKey = GlobalKey<FormState>();
+
+String username = '';
+String First = '';
+String Email = '';
+String Phone = '';
+String Group = '';
+String Password = '';
 bool value = false;
   @override 
   Widget build(BuildContext context) {
     return Scaffold(
       
       body: SafeArea(
-     
+          key: formKey,
         child: Container(
            margin: EdgeInsets.all(15.0),
           height: double.infinity,
@@ -66,7 +74,11 @@ bool value = false;
                         labelStyle: TextStyle(
                           fontSize: 15,
                           color: Colors.black26,
-                        )
+                        ),
+                        hintText:First,
+                hintStyle: TextStyle(
+                  color: Colors.black87
+                )
                       ),
                       ),
                     ),
@@ -91,7 +103,11 @@ bool value = false;
                         labelStyle: TextStyle(
                           fontSize: 15,
                           color: Colors.black26,
-                        )
+                        ),
+                        hintText:Email,
+                hintStyle: TextStyle(
+                  color: Colors.black87
+                )
                       ),
                       ),
                     ),
@@ -116,7 +132,11 @@ bool value = false;
                         labelStyle: TextStyle(
                           fontSize: 15,
                           color: Colors.black26,
-                        )
+                        ),
+                        hintText:Phone,
+                hintStyle: TextStyle(
+                  color: Colors.black87
+                )
                       ),
                       ),
                     ),
@@ -141,7 +161,11 @@ bool value = false;
                         labelStyle: TextStyle(
                           fontSize: 15,
                           color: Colors.black26,
-                        )
+                        ),
+                        hintText:Group,
+                hintStyle: TextStyle(
+                  color: Colors.black87
+                )
                       ),
                       ),
                     ),
@@ -165,7 +189,11 @@ bool value = false;
                         labelStyle: TextStyle(
                           fontSize: 15,
                           color: Colors.black26,
-                        )
+                        ),
+                        hintText:Password,
+                hintStyle: TextStyle(
+                  color: Colors.black87
+                )
                       ),
                       ),
                     ),
