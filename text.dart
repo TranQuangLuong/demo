@@ -1,20 +1,28 @@
 import 'package:flutter/material.dart';
 import "main.dart";
 
-class App extends StatelessWidget {
+class App extends StatefulWidget {
   
   static final String title = 'TextFormField';
- 
-final formKey = GlobalKey<FormState>();
-String username = '';
-String Signln = '';
-String Password ='';
-String LoginLn ='';
- 
- bool value = false;
- 
+
+  @override
+  _AppState createState() => _AppState();
    
 
+}
+
+class _AppState extends State<App> {
+final formKey = GlobalKey<FormState>();
+
+String username = '';
+
+String Signln = '';
+
+String Password ='';
+
+String LoginLn ='';
+
+ bool value = false;
 
   @override
   Widget build( BuildContext context){
@@ -23,7 +31,7 @@ String LoginLn ='';
       body: SafeArea(
         key: formKey,
         child: Container(                                   //Sign In To
-          
+             margin: EdgeInsets.all(15.0),
           width: double.infinity,
           height: double.infinity,
             child: Column(
@@ -33,7 +41,7 @@ String LoginLn ='';
 
               children : <Widget>[
               Container(    
-                margin: EdgeInsets.all(15),                                  //Images
+                margin: EdgeInsets.all(10),                                  //Images
                   child: Image( 
                     image:
                     AssetImage ('assets/one.jpg'),
@@ -57,39 +65,29 @@ String LoginLn ='';
                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
       Container( 
-          margin: EdgeInsets.all(15), // cang le` 2 ben 
+          margin: EdgeInsets.all(10), // cang le` 2 ben 
              alignment: Alignment.centerLeft,
              decoration: BoxDecoration(
               color: Colors.black12,
-              borderRadius: BorderRadius.circular(30),// vo tron` 4 goc
+              borderRadius: BorderRadius.circular(20.0),// vo tron` 4 goc
               
             ),
                 
             child:  TextFormField(                            //Username
                         decoration: InputDecoration(
-                             contentPadding: EdgeInsets.only(top: 12),
+                        
                           border: InputBorder.none,
                           labelText: 'Username',
                           labelStyle: TextStyle(
                             fontSize: 15,
-                            color: Colors.black,
+                            color: Colors.black26,
                           ),
                        hintText:username,
                 hintStyle: TextStyle(
                   color: Colors.black87
                 )
                           ),
-                          
-                          validator: (value){
-                            if (value!.length < 4){
-                                return ' enter 4 ';
 
-                            } else {
-                              return null;
-                            }
-                          },
-                          maxLength: 20,
-                          
                         ),
                         
                          
@@ -99,130 +97,126 @@ String LoginLn ='';
                   
                         SizedBox(height: 10,),
 
-              Column(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                 crossAxisAlignment: CrossAxisAlignment.center,
+               Column(
+                
+                 crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                      Container( 
-                        
-                          margin: EdgeInsets.all(15),
-                            alignment: Alignment.centerLeft,
-                            decoration: BoxDecoration(
-                              color: Colors.black12,
-                              borderRadius: BorderRadius.circular(30),
-                              
+      Container( 
+          margin: EdgeInsets.all(10), // cang le` 2 ben 
+             alignment: Alignment.centerLeft,
+             decoration: BoxDecoration(
+              color: Colors.black12,
+              borderRadius: BorderRadius.circular(20.0),// vo tron` 4 goc
+              
             ),
                 
-            child:  TextFormField(                                  //Email
+            child:  TextFormField(                            //Email
                         decoration: InputDecoration(
-                             contentPadding: EdgeInsets.only(top: 12),
+                        
                           border: InputBorder.none,
-                          labelText: 'Email',
+                          labelText: 'email',
                           labelStyle: TextStyle(
                             fontSize: 15,
-                            color: Colors.black,
+                            color: Colors.black26,
                           ),
-                       
+                       hintText:Signln,
+                hintStyle: TextStyle(
+                  color: Colors.black87
+                )
                           ),
-                          
-                          validator: (value){
-                            if (value!.length < 4){
-                                return ' enter 4 ';
 
-                            } else {
-                              return null;
-                            }
-                          },
-                          maxLength: 20,
-                          
                         ),
-                                 
-            ),
-            ]
+                        
+                         
+            ),]
             
                        ),
+                  
                            SizedBox(height: 10,),
-                     Column(
-                        
-                           crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Container( 
-                         
-                            margin: EdgeInsets.all(15),
-                                alignment: Alignment.centerLeft,
-                                    decoration: BoxDecoration(
-                                       color: Colors.black12,
-                                         borderRadius: BorderRadius.circular(30),
+                      Column(
+                
+                 crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+      Container( 
+          margin: EdgeInsets.all(10), // cang le` 2 ben 
+             alignment: Alignment.centerLeft,
+             decoration: BoxDecoration(
+              color: Colors.black12,
+              borderRadius: BorderRadius.circular(20.0),// vo tron` 4 goc
               
-                                ),
-                       child:  TextFormField(                   //Password
-                         obscureText: true,
+            ),
+                
+            child:  TextFormField(                            //Password
                         decoration: InputDecoration(
-                             contentPadding: EdgeInsets.only(top: 12),
+                        
                           border: InputBorder.none,
                           labelText: 'Password',
                           labelStyle: TextStyle(
                             fontSize: 15,
-                            color: Colors.black,
+                            color: Colors.black26,
                           ),
                        hintText:Password,
                 hintStyle: TextStyle(
                   color: Colors.black87
                 )
                           ),
-                          validator: (value){
-                            if (value!.length < 4){
-                                return ' enter 4 ';
-                            } else {
-                              return null;
-                            }
-                          },
-                          maxLength: 20,
-                                   ),
-                                    ),
-                                    ]
-                                        ),
+
+                        ),
+                        
+                         
+            ),]
+            
+                       ),
+                  
                                         SizedBox(height: 10,),
                                        
-                                           Container(     
-                                                     //Stay Logged In
-                                            height: 20,
-                                            child: Row( 
+                                           new Row(
+               
+                                                        
                                               children: <Widget>[
+                                                
                                                 new ClipRRect(
-                                                  borderRadius: BorderRadius.all(Radius.circular(15.0))
-    
-                                                  ),
                                               
-                                                Theme(
+                                              clipBehavior: Clip.hardEdge,
+                                              borderRadius: BorderRadius.all(Radius.circular(5)),
+                                              
+                                              child: SizedBox(
+                                                width: Checkbox.width,
+                                                height: Checkbox.width,
+                                                child: Container(
                                                   
-                                                  data: ThemeData(unselectedWidgetColor: Colors.green),
-                                                  child: 
-                                                    new Checkbox(
+                                                  decoration: new BoxDecoration(
+                                                    border: Border.all(
+                                                      width: 1,
+                                                    ),
+                                                    borderRadius: new BorderRadius.circular(5),
+                                                  ),
+                                                  child: Theme(
+                                                    data: ThemeData(
+                                                      unselectedWidgetColor: Colors.green,
+                                                    ),
+                                                    child: Checkbox(
+                                                      
                                                       value: value,
-                                                      checkColor: Colors.green,
-                                                      activeColor: Colors.green,
-                                                      onChanged: (value) {
-                                                        setState(() =>
-                                                          this.value = value! 
-
-                                                              );
-                                                            },
-                                                          ),
-                                                        ),
-                                            
-                                  Text(
-                                    " Stay Logged In ",
-                                    style: TextStyle(
-                                      color: Colors.black26,
-                                      fontWeight: FontWeight.normal
-                                    ),
-                                  ),
-                                                 
-                                  
-                                      SizedBox(width: 50,),
-
-                                    Container(                                   //Forgotten Password?
+                                                      onChanged: (state) =>
+                                                          setState(() => value = !value),
+                                                      activeColor: Colors.green[400],
+                                                      
+                                                      materialTapTargetSize: MaterialTapTargetSize.padded,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                            SizedBox(width: 10.0,),
+                                                new Expanded(
+                                                    child: new Text('Stay Logged In',
+                                                      style: new TextStyle(
+                                                          color: Color(0xff707070)
+                                                      ),
+                                                    )
+                                                ),
+                                    new  Container(                                   //Forgotten Password?
                                       
                                         alignment: Alignment.centerRight,
                                           child: InkWell(
@@ -233,35 +227,33 @@ String LoginLn ='';
                                        child: Text (
                                        " Forgotten Password? ? ",
                                        style: TextStyle(
-                                          color: Colors.black26, 
+                                          color: Colors.black45, 
                                              fontWeight: FontWeight.normal
            
                                                   ),
                                                        ),
                                                           ),
                                                            ),
-                                            
+                                             
                                               ],
-
-
-                                                     ),
-                                                     
-                                                     ),
+                                              
+                                            
+                                            ), 
                                         
                         SizedBox(height: 10,),
                         Container(                                    //Sign Ln
-                          margin: EdgeInsets.all(15),
-                         padding : EdgeInsets.symmetric(vertical: 20),
+                          margin: EdgeInsets.all(10),
+                         padding : EdgeInsets.symmetric(vertical: 18),
                         
                            decoration: BoxDecoration(
                            border: Border.all(width: 2.0 ,color :const Color(0xff5ABD8C)),
                             color: Colors.green[300],
-                              borderRadius: BorderRadius.circular(30),
+                              borderRadius: BorderRadius.circular(20),
                                  boxShadow: [
                                     BoxShadow(
                                        color: Colors.green.shade400,
                                             blurRadius: 20,
-                                                 offset: Offset(0,16)
+                                                 offset: Offset(0,14)
                                   )
                                ]
                                
@@ -278,8 +270,8 @@ String LoginLn ='';
                                      " Sign Ln ",
                                      style: TextStyle(
                                        color: Color(0xfff4f4f4),
-                                         fontSize: 18,
-                                           fontWeight: FontWeight.bold
+                                         fontSize: 20,
+                                           fontWeight: FontWeight.normal
                                     
                                       ),
                                       
@@ -301,6 +293,6 @@ String LoginLn ='';
 
     }
 
-  setState(bool Function() param0) {}
-  }
+  
+}
 
