@@ -65,17 +65,18 @@ String LoginLn ='';
                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
       Container( 
-          margin: EdgeInsets.all(10), // cang le` 2 ben 
+        padding : EdgeInsets.symmetric(vertical: 3.0),
+          margin: EdgeInsets.all(5.0), // cang le` 2 ben 
              alignment: Alignment.centerLeft,
              decoration: BoxDecoration(
-              color: Colors.black12,
+              color: Color(0xffEFEFEF),
               borderRadius: BorderRadius.circular(20.0),// vo tron` 4 goc
               
             ),
                 
             child:  TextFormField(                            //Username
                         decoration: InputDecoration(
-                        
+                          contentPadding: EdgeInsets.only(left: 15),
                           border: InputBorder.none,
                           labelText: 'Username',
                           labelStyle: TextStyle(
@@ -102,17 +103,18 @@ String LoginLn ='';
                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
       Container( 
-          margin: EdgeInsets.all(10), // cang le` 2 ben 
+        padding : EdgeInsets.symmetric(vertical: 3.0),
+          margin: EdgeInsets.all(5.0), // cang le` 2 ben 
              alignment: Alignment.centerLeft,
              decoration: BoxDecoration(
-              color: Colors.black12,
+              color: Color(0xffEFEFEF),
               borderRadius: BorderRadius.circular(20.0),// vo tron` 4 goc
               
             ),
                 
             child:  TextFormField(                            //Email
                         decoration: InputDecoration(
-                        
+                          contentPadding: EdgeInsets.only(left: 15),
                           border: InputBorder.none,
                           labelText: 'email',
                           labelStyle: TextStyle(
@@ -138,17 +140,19 @@ String LoginLn ='';
                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
       Container( 
-          margin: EdgeInsets.all(10), // cang le` 2 ben 
+         padding : EdgeInsets.symmetric(vertical: 3.0),
+          margin: EdgeInsets.all(5.0), // cang le` 2 ben 
              alignment: Alignment.centerLeft,
              decoration: BoxDecoration(
-              color: Colors.black12,
+              color: Color(0xffEFEFEF),
               borderRadius: BorderRadius.circular(20.0),// vo tron` 4 goc
               
             ),
                 
             child:  TextFormField(                            //Password
                         decoration: InputDecoration(
-                        
+                          contentPadding: EdgeInsets.only(left: 15),
+                          
                           border: InputBorder.none,
                           labelText: 'Password',
                           labelStyle: TextStyle(
@@ -173,34 +177,30 @@ String LoginLn ='';
                                            new Row(
                
                                                         
-                                              children: <Widget>[
-                                                
-                                                new ClipRRect(
-                                              
-                                              clipBehavior: Clip.hardEdge,
-                                              borderRadius: BorderRadius.all(Radius.circular(5)),
-                                              
-                                              child: SizedBox(
-                                                width: Checkbox.width,
-                                                height: Checkbox.width,
-                                                child: Container(
-                                                  
+                                    children: <Widget>[                                             
+                                    new ClipRRect(         
+                                      clipBehavior: Clip.hardEdge,
+                                        borderRadius: BorderRadius.all(Radius.circular(5)),                                           
+                                            child: SizedBox(
+                                              width: Checkbox.width,
+                                              height: Checkbox.width,
+                                                child: Container(                                                
                                                   decoration: new BoxDecoration(
                                                     border: Border.all(
                                                       width: 1,
-                                                    ),
+                                                  ),
                                                     borderRadius: new BorderRadius.circular(5),
                                                   ),
                                                   child: Theme(
                                                     data: ThemeData(
                                                       unselectedWidgetColor: Colors.green,
-                                                    ),
+                                                  ),
                                                     child: Checkbox(
                                                       
                                                       value: value,
                                                       onChanged: (state) =>
                                                           setState(() => value = !value),
-                                                      activeColor: Colors.green[400],
+                                                      activeColor: Color(0xff5ABD8C),
                                                       
                                                       materialTapTargetSize: MaterialTapTargetSize.padded,
                                                     ),
@@ -216,73 +216,57 @@ String LoginLn ='';
                                                       ),
                                                     )
                                                 ),
-                                    new  Container(                                   //Forgotten Password?
-                                      
-                                        alignment: Alignment.centerRight,
-                                          child: InkWell(
-                                            onTap: (){
-                                              print("Forgotten Password?");
-
-                                                },
-                                       child: Text (
-                                       " Forgotten Password? ? ",
-                                       style: TextStyle(
-                                          color: Colors.black45, 
-                                             fontWeight: FontWeight.normal
-           
+                                                new  Container(                                   //Forgotten Password?                                     
+                                                  alignment: Alignment.centerRight,
+                                                    child: InkWell(
+                                                      onTap: (){
+                                                        print("Forgotten Password?");
+                                                  },
+                                                  child: Text (
+                                                     " Forgotten Password? ? ",
+                                                    style: TextStyle(
+                                                       color: Color(0xff707070), 
+                                                         fontWeight: FontWeight.normal                        
                                                   ),
                                                        ),
                                                           ),
-                                                           ),
-                                             
-                                              ],
-                                              
-                                            
-                                            ), 
-                                        
-                        SizedBox(height: 10,),
-                        Container(                                    //Sign Ln
-                          margin: EdgeInsets.all(10),
-                         padding : EdgeInsets.symmetric(vertical: 18),
-                        
-                           decoration: BoxDecoration(
-                           border: Border.all(width: 2.0 ,color :const Color(0xff5ABD8C)),
-                            color: Colors.green[300],
+                                                           ),                                           
+                                                  ],                                                                                    
+                                                 ),                                       
+               SizedBox(height: 10,),
+                  Container(                                    //Sign Ln
+                      margin: EdgeInsets.all(10),
+                        padding : EdgeInsets.symmetric(vertical: 15),                    
+                          decoration: BoxDecoration(                       
+                            color: Color(0xff5ABD8C),
                               borderRadius: BorderRadius.circular(20),
                                  boxShadow: [
-                                    BoxShadow(
-                                       color: Colors.green.shade400,
-                                            blurRadius: 20,
-                                                 offset: Offset(0,14)
+                                  BoxShadow(
+                                    color: Color(0xff5ABD8C),
+                                      blurRadius: 15,
+                                        offset: Offset(0,10)
                                   )
-                               ]
-                               
+                               ],                             
                              ),
-                              child: Center(
-      
+                              child: Center(      
                                   child: InkWell(
                                   onTap: () {
                                       print(" Sign Ln");
-                                         }, 
-                                         
-                               
-                                  child: Text(
-                                     " Sign Ln ",
-                                     style: TextStyle(
-                                       color: Color(0xfff4f4f4),
-                                         fontSize: 20,
-                                           fontWeight: FontWeight.normal
-                                    
-                                      ),
-                                      
+                                         },                                  
+                                child: Text(
+                                  " Sign Ln ",
+                                   style: TextStyle(
+                                     color: Color(0xfff4f4f4),
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.normal                                  
+                                      ),                                    
                                     ),
                                   ),
                                  ),
-                                )
-                             
+                                )                           
                               ],
                              ),     
-                                          ),  
+                            ),  
                 ),
               );
     
